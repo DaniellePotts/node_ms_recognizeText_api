@@ -23,7 +23,7 @@ app.get("/recognizeText", function(req, res) {
 function requestOcr() {
   let options = {
     uri:
-      "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/recognizeText?mode=Printed",
+      "https://{location}.api.cognitive.microsoft.com/vision/v{version}/recognizeText?mode={Printed/Handwritten}",
     method: "POST",
     headers: {
       "Ocp-Apim-Subscription-Key": "my_key",
